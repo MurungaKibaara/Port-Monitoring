@@ -2,7 +2,7 @@
 import nmap
 import socket
 import socketserver
-from create_server import MyTCPSocketHandler
+from server import MyTCPSocketHandler
 
 nmscan = nmap.PortScanner()
 
