@@ -10,7 +10,7 @@ class MyTCPSocketHandler(socketserver.BaseRequestHandler):
 
 if __name__ == "__main__":
     
-    HOST, PORT = "localhost", 9999
+    HOST, PORT = "195.202.71.100", 8821
 
     server = socketserver.TCPServer((HOST, PORT), MyTCPSocketHandler)
     server.serve_forever()

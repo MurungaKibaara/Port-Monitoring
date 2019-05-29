@@ -6,7 +6,7 @@ from server import MyTCPSocketHandler
 
 nmscan = nmap.PortScanner()
 
-nmscan.scan('127.0.0.1', '9999')
+nmscan.scan(hosts='0.0.0.0',ports='9999', arguments='-n -Pn')
 
 def port_scanner():
     '''scan for open or closed ports'''
@@ -34,7 +34,7 @@ def open_closed_server(state_of_port):
     if state_of_port == 'closed':
         print('\n\nRestarting port...')
 
-        HOST, PORT = "localhost", 9999
+        HOST, PORT = "0.0.0.0", 9999
 
         print("-"*60)
         print('\n\nport: %d successfully restarted' %PORT)
@@ -44,4 +44,3 @@ def open_closed_server(state_of_port):
 
 state_of_port = port_scanner()
 open_closed_server(state_of_port)
-port_scanner()
